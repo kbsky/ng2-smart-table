@@ -1,9 +1,9 @@
 "use strict";
-var core_1 = require('@angular/core');
-var grid_1 = require('./lib/grid');
-var data_source_1 = require('./lib/data-source/data-source');
-var helpers_1 = require('./lib/helpers');
-var local_data_source_1 = require('./lib/data-source/local/local.data-source');
+var core_1 = require("@angular/core");
+var grid_1 = require("./lib/grid");
+var data_source_1 = require("./lib/data-source/data-source");
+var helpers_1 = require("./lib/helpers");
+var local_data_source_1 = require("./lib/data-source/local/local.data-source");
 var Ng2SmartTableComponent = (function () {
     function Ng2SmartTableComponent() {
         this.settings = {};
@@ -150,28 +150,28 @@ var Ng2SmartTableComponent = (function () {
     Ng2SmartTableComponent.prototype.resetAllSelector = function () {
         this.isAllSelected = false;
     };
-    Ng2SmartTableComponent.decorators = [
-        { type: core_1.Component, args: [{
-                    selector: 'ng2-smart-table',
-                    styleUrls: ['ng2-smart-table.scss'],
-                    templateUrl: 'ng2-smart-table.html'
-                },] },
-    ];
-    /** @nocollapse */
-    Ng2SmartTableComponent.ctorParameters = function () { return []; };
-    Ng2SmartTableComponent.propDecorators = {
-        'source': [{ type: core_1.Input },],
-        'settings': [{ type: core_1.Input },],
-        'rowSelect': [{ type: core_1.Output },],
-        'userRowSelect': [{ type: core_1.Output },],
-        'delete': [{ type: core_1.Output },],
-        'edit': [{ type: core_1.Output },],
-        'create': [{ type: core_1.Output },],
-        'deleteConfirm': [{ type: core_1.Output },],
-        'editConfirm': [{ type: core_1.Output },],
-        'createConfirm': [{ type: core_1.Output },],
-    };
     return Ng2SmartTableComponent;
 }());
+Ng2SmartTableComponent.decorators = [
+    { type: core_1.Component, args: [{
+                selector: 'ng2-smart-table',
+                styleUrls: ['ng2-smart-table.scss'],
+                templateUrl: 'ng2-smart-table.html'
+            },] },
+];
+/** @nocollapse */
+Ng2SmartTableComponent.ctorParameters = function () { return []; };
+Ng2SmartTableComponent.propDecorators = {
+    'source': [{ type: core_1.Input },],
+    'settings': [{ type: core_1.Input },],
+    'rowSelect': [{ type: core_1.Output },],
+    'userRowSelect': [{ type: core_1.Output },],
+    'delete': [{ type: core_1.Output },],
+    'edit': [{ type: core_1.Output },],
+    'create': [{ type: core_1.Output },],
+    'deleteConfirm': [{ type: core_1.Output },],
+    'editConfirm': [{ type: core_1.Output },],
+    'createConfirm': [{ type: core_1.Output },],
+};
 exports.Ng2SmartTableComponent = Ng2SmartTableComponent;
 //# sourceMappingURL=ng2-smart-table.component.js.map

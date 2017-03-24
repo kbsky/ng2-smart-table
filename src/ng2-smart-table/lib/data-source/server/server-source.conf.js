@@ -11,14 +11,14 @@ var ServerSourceConf = (function () {
         this.totalKey = totalKey ? totalKey : ServerSourceConf.TOTAL_KEY;
         this.dataKey = dataKey ? dataKey : ServerSourceConf.DATA_KEY;
     }
-    ServerSourceConf.SORT_FIELD_KEY = '_sort';
-    ServerSourceConf.SORT_DIR_KEY = '_order';
-    ServerSourceConf.PAGER_PAGE_KEY = '_page';
-    ServerSourceConf.PAGER_LIMIT_KEY = '_limit';
-    ServerSourceConf.FILTER_FIELD_KEY = '#field#_like';
-    ServerSourceConf.TOTAL_KEY = 'x-total-count';
-    ServerSourceConf.DATA_KEY = '';
     return ServerSourceConf;
 }());
+ServerSourceConf.SORT_FIELD_KEY = '_sort';
+ServerSourceConf.SORT_DIR_KEY = '_order';
+ServerSourceConf.PAGER_PAGE_KEY = '_page';
+ServerSourceConf.PAGER_LIMIT_KEY = '_limit';
+ServerSourceConf.FILTER_FIELD_KEY = '#field#_like';
+ServerSourceConf.TOTAL_KEY = 'x-total-count';
+ServerSourceConf.DATA_KEY = '';
 exports.ServerSourceConf = ServerSourceConf;
 //# sourceMappingURL=server-source.conf.js.map

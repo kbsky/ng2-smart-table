@@ -1,5 +1,5 @@
 "use strict";
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var PagerComponent = (function () {
     function PagerComponent() {
         this.changePage = new core_1.EventEmitter();
@@ -68,21 +68,21 @@ var PagerComponent = (function () {
             }
         }
     };
-    PagerComponent.decorators = [
-        { type: core_1.Component, args: [{
-                    selector: 'ng2-smart-table-pager',
-                    styleUrls: ['pager.scss'],
-                    template: "\n    <nav *ngIf=\"shouldShow()\" class=\"ng2-smart-pagination-nav\">\n      <ul class=\"ng2-smart-pagination pagination\">\n        <li class=\"ng2-smart-page-item page-item\" [ngClass]=\"{disabled: getPage() == 1}\">\n          <a class=\"ng2-smart-page-link page-link\" href=\"#\" \n          (click)=\"getPage() == 1 ? false : paginate(1)\" aria-label=\"First\">\n            <span aria-hidden=\"true\">&laquo;</span>\n            <span class=\"sr-only\">First</span>\n          </a>\n        </li>\n        <li class=\"ng2-smart-page-item page-item\" \n        [ngClass]=\"{active: getPage() == page}\" *ngFor=\"let page of getPages()\">\n          <span class=\"ng2-smart-page-link page-link\" \n          *ngIf=\"getPage() == page\">{{ page }} <span class=\"sr-only\">(current)</span></span>\n          <a class=\"ng2-smart-page-link page-link\" href=\"#\" \n          (click)=\"paginate(page)\" *ngIf=\"getPage() != page\">{{ page }}</a>\n        </li>\n  \n        <li class=\"ng2-smart-page-item page-item\" \n        [ngClass]=\"{disabled: getPage() == getLast()}\">\n          <a class=\"ng2-smart-page-link page-link\" href=\"#\" \n          (click)=\"getPage() == getLast() ? false : paginate(getLast())\" aria-label=\"Last\">\n            <span aria-hidden=\"true\">&raquo;</span>\n            <span class=\"sr-only\">Last</span>\n          </a>\n        </li>\n      </ul>\n    </nav>\n  "
-                },] },
-    ];
-    /** @nocollapse */
-    PagerComponent.ctorParameters = function () { return []; };
-    PagerComponent.propDecorators = {
-        'perPage': [{ type: core_1.Input },],
-        'source': [{ type: core_1.Input },],
-        'changePage': [{ type: core_1.Output },],
-    };
     return PagerComponent;
 }());
+PagerComponent.decorators = [
+    { type: core_1.Component, args: [{
+                selector: 'ng2-smart-table-pager',
+                styleUrls: ['pager.scss'],
+                template: "\n    <nav *ngIf=\"shouldShow()\" class=\"ng2-smart-pagination-nav\">\n      <ul class=\"ng2-smart-pagination pagination\">\n        <li class=\"ng2-smart-page-item page-item\" [ngClass]=\"{disabled: getPage() == 1}\">\n          <a class=\"ng2-smart-page-link page-link\" href=\"#\" \n          (click)=\"getPage() == 1 ? false : paginate(1)\" aria-label=\"First\">\n            <span aria-hidden=\"true\">&laquo;</span>\n            <span class=\"sr-only\">First</span>\n          </a>\n        </li>\n        <li class=\"ng2-smart-page-item page-item\" \n        [ngClass]=\"{active: getPage() == page}\" *ngFor=\"let page of getPages()\">\n          <span class=\"ng2-smart-page-link page-link\" \n          *ngIf=\"getPage() == page\">{{ page }} <span class=\"sr-only\">(current)</span></span>\n          <a class=\"ng2-smart-page-link page-link\" href=\"#\" \n          (click)=\"paginate(page)\" *ngIf=\"getPage() != page\">{{ page }}</a>\n        </li>\n  \n        <li class=\"ng2-smart-page-item page-item\" \n        [ngClass]=\"{disabled: getPage() == getLast()}\">\n          <a class=\"ng2-smart-page-link page-link\" href=\"#\" \n          (click)=\"getPage() == getLast() ? false : paginate(getLast())\" aria-label=\"Last\">\n            <span aria-hidden=\"true\">&raquo;</span>\n            <span class=\"sr-only\">Last</span>\n          </a>\n        </li>\n      </ul>\n    </nav>\n  "
+            },] },
+];
+/** @nocollapse */
+PagerComponent.ctorParameters = function () { return []; };
+PagerComponent.propDecorators = {
+    'perPage': [{ type: core_1.Input },],
+    'source': [{ type: core_1.Input },],
+    'changePage': [{ type: core_1.Output },],
+};
 exports.PagerComponent = PagerComponent;
 //# sourceMappingURL=pager.component.js.map

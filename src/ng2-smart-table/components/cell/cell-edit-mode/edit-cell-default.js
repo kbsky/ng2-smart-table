@@ -1,5 +1,5 @@
 "use strict";
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var EditCellDefault = (function () {
     function EditCellDefault() {
         this.inputClass = '';
@@ -16,12 +16,12 @@ var EditCellDefault = (function () {
     EditCellDefault.prototype.onClick = function (event) {
         event.stopPropagation();
     };
-    EditCellDefault.propDecorators = {
-        'cell': [{ type: core_1.Input },],
-        'inputClass': [{ type: core_1.Input },],
-        'edited': [{ type: core_1.Output },],
-    };
     return EditCellDefault;
 }());
+EditCellDefault.propDecorators = {
+    'cell': [{ type: core_1.Input },],
+    'inputClass': [{ type: core_1.Input },],
+    'edited': [{ type: core_1.Output },],
+};
 exports.EditCellDefault = EditCellDefault;
 //# sourceMappingURL=edit-cell-default.js.map

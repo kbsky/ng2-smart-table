@@ -1,5 +1,5 @@
 "use strict";
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var FilterComponent = (function () {
     function FilterComponent() {
         this.inputClass = '';
@@ -22,22 +22,22 @@ var FilterComponent = (function () {
             filter: this.column.getFilterFunction()
         });
     };
-    FilterComponent.decorators = [
-        { type: core_1.Component, args: [{
-                    selector: 'ng2-smart-table-filter',
-                    styleUrls: ['filter.scss'],
-                    template: "\n    <div class=\"ng2-smart-filter\" *ngIf=\"column.isFilterable\" [ngSwitch]=\"column.getFilterType()\">\n      <select-filter *ngSwitchCase=\"'list'\"\n                     [query]=\"query\"\n                     [ngClass]=\"inputClass\"\n                     [column]=\"column\"\n                     (filter)=\"onFilter($event)\">\n      </select-filter>\n      <checkbox-filter *ngSwitchCase=\"'checkbox'\"\n                       [query]=\"query\"\n                       [ngClass]=\"inputClass\"\n                       [column]=\"column\"\n                       (filter)=\"onFilter($event)\">\n      </checkbox-filter>\n      <completer-filter *ngSwitchCase=\"'completer'\"\n                        [query]=\"query\"\n                        [ngClass]=\"inputClass\"\n                        [column]=\"column\"\n                        (filter)=\"onFilter($event)\">\n      </completer-filter>\n      <input-filter *ngSwitchDefault\n                    [query]=\"query\"\n                    [ngClass]=\"inputClass\"\n                    [column]=\"column\"\n                    (filter)=\"onFilter($event)\">\n      </input-filter>\n    </div>\n  "
-                },] },
-    ];
-    /** @nocollapse */
-    FilterComponent.ctorParameters = function () { return []; };
-    FilterComponent.propDecorators = {
-        'column': [{ type: core_1.Input },],
-        'source': [{ type: core_1.Input },],
-        'inputClass': [{ type: core_1.Input },],
-        'filter': [{ type: core_1.Output },],
-    };
     return FilterComponent;
 }());
+FilterComponent.decorators = [
+    { type: core_1.Component, args: [{
+                selector: 'ng2-smart-table-filter',
+                styleUrls: ['filter.scss'],
+                template: "\n    <div class=\"ng2-smart-filter\" *ngIf=\"column.isFilterable\" [ngSwitch]=\"column.getFilterType()\">\n      <select-filter *ngSwitchCase=\"'list'\"\n                     [query]=\"query\"\n                     [ngClass]=\"inputClass\"\n                     [column]=\"column\"\n                     (filter)=\"onFilter($event)\">\n      </select-filter>\n      <checkbox-filter *ngSwitchCase=\"'checkbox'\"\n                       [query]=\"query\"\n                       [ngClass]=\"inputClass\"\n                       [column]=\"column\"\n                       (filter)=\"onFilter($event)\">\n      </checkbox-filter>\n      <completer-filter *ngSwitchCase=\"'completer'\"\n                        [query]=\"query\"\n                        [ngClass]=\"inputClass\"\n                        [column]=\"column\"\n                        (filter)=\"onFilter($event)\">\n      </completer-filter>\n      <input-filter *ngSwitchDefault\n                    [query]=\"query\"\n                    [ngClass]=\"inputClass\"\n                    [column]=\"column\"\n                    (filter)=\"onFilter($event)\">\n      </input-filter>\n    </div>\n  "
+            },] },
+];
+/** @nocollapse */
+FilterComponent.ctorParameters = function () { return []; };
+FilterComponent.propDecorators = {
+    'column': [{ type: core_1.Input },],
+    'source': [{ type: core_1.Input },],
+    'inputClass': [{ type: core_1.Input },],
+    'filter': [{ type: core_1.Output },],
+};
 exports.FilterComponent = FilterComponent;
 //# sourceMappingURL=filter.component.js.map

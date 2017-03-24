@@ -1,7 +1,7 @@
 "use strict";
-var data_set_1 = require('./data-set/data-set');
-var Rx_1 = require('rxjs/Rx');
-var helpers_1 = require('./helpers');
+var data_set_1 = require("./data-set/data-set");
+var Rx_1 = require("rxjs/Rx");
+var helpers_1 = require("./helpers");
 var Grid = (function () {
     function Grid(source, settings) {
         this.createFormShown = false;

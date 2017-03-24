@@ -4,25 +4,25 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var core_1 = require('@angular/core');
-var edit_cell_default_1 = require('./edit-cell-default');
+var core_1 = require("@angular/core");
+var edit_cell_default_1 = require("./edit-cell-default");
 var DefaultEditComponent = (function (_super) {
     __extends(DefaultEditComponent, _super);
     function DefaultEditComponent() {
-        _super.call(this);
+        return _super.call(this) || this;
     }
     DefaultEditComponent.prototype.getEditorType = function () {
         return this.cell.getColumn().editor && this.cell.getColumn().editor.type;
     };
-    DefaultEditComponent.decorators = [
-        { type: core_1.Component, args: [{
-                    selector: 'table-cell-default-editor',
-                    templateUrl: './default-edit.component.html',
-                },] },
-    ];
-    /** @nocollapse */
-    DefaultEditComponent.ctorParameters = function () { return []; };
     return DefaultEditComponent;
 }(edit_cell_default_1.EditCellDefault));
+DefaultEditComponent.decorators = [
+    { type: core_1.Component, args: [{
+                selector: 'table-cell-default-editor',
+                templateUrl: './default-edit.component.html',
+            },] },
+];
+/** @nocollapse */
+DefaultEditComponent.ctorParameters = function () { return []; };
 exports.DefaultEditComponent = DefaultEditComponent;
 //# sourceMappingURL=default-edit.component.js.map

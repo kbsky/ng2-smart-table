@@ -1,5 +1,5 @@
 "use strict";
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var DefaultFilter = (function () {
     function DefaultFilter() {
         this.delay = 300;
@@ -12,13 +12,13 @@ var DefaultFilter = (function () {
     DefaultFilter.prototype.setFilter = function () {
         this.filter.emit(this.query);
     };
-    DefaultFilter.propDecorators = {
-        'query': [{ type: core_1.Input },],
-        'inputClass': [{ type: core_1.Input },],
-        'column': [{ type: core_1.Input },],
-        'filter': [{ type: core_1.Output },],
-    };
     return DefaultFilter;
 }());
+DefaultFilter.propDecorators = {
+    'query': [{ type: core_1.Input },],
+    'inputClass': [{ type: core_1.Input },],
+    'column': [{ type: core_1.Input },],
+    'filter': [{ type: core_1.Output },],
+};
 exports.DefaultFilter = DefaultFilter;
 //# sourceMappingURL=default-filter.js.map

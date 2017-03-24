@@ -9,10 +9,10 @@ var LocalFilter = (function () {
             return filter.call(null, value, search);
         });
     };
-    LocalFilter.FILTER = function (value, search) {
-        return value.toString().toLowerCase().includes(search.toString().toLowerCase());
-    };
     return LocalFilter;
 }());
+LocalFilter.FILTER = function (value, search) {
+    return value.toString().toLowerCase().includes(search.toString().toLowerCase());
+};
 exports.LocalFilter = LocalFilter;
 //# sourceMappingURL=local.filter.js.map

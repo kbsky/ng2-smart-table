@@ -4,16 +4,17 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var core_1 = require('@angular/core');
-var Subject_1 = require('rxjs/Subject');
-var ng2_completer_1 = require('ng2-completer');
-var default_filter_1 = require('./default-filter');
+var core_1 = require("@angular/core");
+var Subject_1 = require("rxjs/Subject");
+var ng2_completer_1 = require("ng2-completer");
+var default_filter_1 = require("./default-filter");
 var CompleterFilterComponent = (function (_super) {
     __extends(CompleterFilterComponent, _super);
     function CompleterFilterComponent(completerService) {
-        _super.call(this);
-        this.completerService = completerService;
-        this.completerContent = new Subject_1.Subject();
+        var _this = _super.call(this) || this;
+        _this.completerService = completerService;
+        _this.completerContent = new Subject_1.Subject();
+        return _this;
     }
     CompleterFilterComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -36,17 +37,17 @@ var CompleterFilterComponent = (function (_super) {
         if (event === '')
             this.completerContent.next(event);
     };
-    CompleterFilterComponent.decorators = [
-        { type: core_1.Component, args: [{
-                    selector: 'completer-filter',
-                    template: "\n    <ng2-completer [(ngModel)]=\"query\"\n                   (ngModelChange)=\"inputTextChanged($event)\"\n                   [dataService]=\"column.getFilterConfig().completer.dataService\"\n                   [minSearchLength]=\"column.getFilterConfig().completer.minSearchLength || 0\"\n                   [pause]=\"column.getFilterConfig().completer.pause || 0\"\n                   [placeholder]=\"column.getFilterConfig().completer.placeholder || 'Start typing...'\"\n                   (selected)=\"completerContent.next($event)\">\n    </ng2-completer>\n  "
-                },] },
-    ];
-    /** @nocollapse */
-    CompleterFilterComponent.ctorParameters = function () { return [
-        { type: ng2_completer_1.CompleterService, },
-    ]; };
     return CompleterFilterComponent;
 }(default_filter_1.DefaultFilter));
+CompleterFilterComponent.decorators = [
+    { type: core_1.Component, args: [{
+                selector: 'completer-filter',
+                template: "\n    <ng2-completer [(ngModel)]=\"query\"\n                   (ngModelChange)=\"inputTextChanged($event)\"\n                   [dataService]=\"column.getFilterConfig().completer.dataService\"\n                   [minSearchLength]=\"column.getFilterConfig().completer.minSearchLength || 0\"\n                   [pause]=\"column.getFilterConfig().completer.pause || 0\"\n                   [placeholder]=\"column.getFilterConfig().completer.placeholder || 'Start typing...'\"\n                   (selected)=\"completerContent.next($event)\">\n    </ng2-completer>\n  "
+            },] },
+];
+/** @nocollapse */
+CompleterFilterComponent.ctorParameters = function () { return [
+    { type: ng2_completer_1.CompleterService, },
+]; };
 exports.CompleterFilterComponent = CompleterFilterComponent;
 //# sourceMappingURL=completer-filter.component.js.map

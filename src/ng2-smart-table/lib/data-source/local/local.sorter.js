@@ -9,16 +9,16 @@ var LocalSorter = (function () {
             return compare.call(null, dir, a[field], b[field]);
         });
     };
-    LocalSorter.COMPARE = function (direction, a, b) {
-        if (a < b) {
-            return -1 * direction;
-        }
-        if (a > b) {
-            return direction;
-        }
-        return 0;
-    };
     return LocalSorter;
 }());
+LocalSorter.COMPARE = function (direction, a, b) {
+    if (a < b) {
+        return -1 * direction;
+    }
+    if (a > b) {
+        return direction;
+    }
+    return 0;
+};
 exports.LocalSorter = LocalSorter;
 //# sourceMappingURL=local.sorter.js.map

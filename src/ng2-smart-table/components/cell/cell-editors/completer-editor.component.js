@@ -4,15 +4,16 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var core_1 = require('@angular/core');
-var ng2_completer_1 = require('ng2-completer');
-var default_editor_1 = require('./default-editor');
+var core_1 = require("@angular/core");
+var ng2_completer_1 = require("ng2-completer");
+var default_editor_1 = require("./default-editor");
 var CompleterEditorComponent = (function (_super) {
     __extends(CompleterEditorComponent, _super);
     function CompleterEditorComponent(completerService) {
-        _super.call(this);
-        this.completerService = completerService;
-        this.completerStr = '';
+        var _this = _super.call(this) || this;
+        _this.completerService = completerService;
+        _this.completerStr = '';
+        return _this;
     }
     CompleterEditorComponent.prototype.ngOnInit = function () {
         if (this.cell.getColumn().editor && this.cell.getColumn().editor.type === 'completer') {
@@ -25,17 +26,17 @@ var CompleterEditorComponent = (function (_super) {
         this.cell.newValue = event.title;
         return false;
     };
-    CompleterEditorComponent.decorators = [
-        { type: core_1.Component, args: [{
-                    selector: 'completer-editor',
-                    template: "\n    <ng2-completer [(ngModel)]=\"completerStr\"\n                   [dataService]=\"cell.getColumn().getConfig().completer.dataService\"\n                   [minSearchLength]=\"cell.getColumn().getConfig().completer.minSearchLength || 0\"\n                   [pause]=\"cell.getColumn().getConfig().completer.pause || 0\"\n                   [placeholder]=\"cell.getColumn().getConfig().completer.placeholder || 'Start typing...'\"\n                   (selected)=\"onEditedCompleter($event)\">\n    </ng2-completer>\n    "
-                },] },
-    ];
-    /** @nocollapse */
-    CompleterEditorComponent.ctorParameters = function () { return [
-        { type: ng2_completer_1.CompleterService, },
-    ]; };
     return CompleterEditorComponent;
 }(default_editor_1.DefaultEditor));
+CompleterEditorComponent.decorators = [
+    { type: core_1.Component, args: [{
+                selector: 'completer-editor',
+                template: "\n    <ng2-completer [(ngModel)]=\"completerStr\"\n                   [dataService]=\"cell.getColumn().getConfig().completer.dataService\"\n                   [minSearchLength]=\"cell.getColumn().getConfig().completer.minSearchLength || 0\"\n                   [pause]=\"cell.getColumn().getConfig().completer.pause || 0\"\n                   [placeholder]=\"cell.getColumn().getConfig().completer.placeholder || 'Start typing...'\"\n                   (selected)=\"onEditedCompleter($event)\">\n    </ng2-completer>\n    "
+            },] },
+];
+/** @nocollapse */
+CompleterEditorComponent.ctorParameters = function () { return [
+    { type: ng2_completer_1.CompleterService, },
+]; };
 exports.CompleterEditorComponent = CompleterEditorComponent;
 //# sourceMappingURL=completer-editor.component.js.map

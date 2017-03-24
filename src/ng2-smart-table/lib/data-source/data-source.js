@@ -1,5 +1,5 @@
 "use strict";
-var Rx_1 = require('rxjs/Rx');
+var Rx_1 = require("rxjs/Rx");
 var DataSource = (function () {
     function DataSource() {
         this.onChangedSource = new Rx_1.Subject();

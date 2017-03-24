@@ -1,1 +1,1 @@
-{"version":3,"file":"ng2-smart-table.js","sourceRoot":"","sources":["ng2-smart-table.ts"],"names":[],"mappings":";;;;AAAA,iBAAc,kCAAkC,CAAC,EAAA;AACjD,iBAAc,iDAAiD,CAAC,EAAA;AAChE,iBAAc,2BAA2B,CAAC,EAAA;AAC1C,iBAAc,8BAA8B,CAAC,EAAA;AAC7C,qBAAqB,yCAAyC,CAAC;AAAtD,2BAAsD;AAC/D,+BAAsC,mEAAmE,CAAC;AAAjG,uDAAiG;AAC1B"}
+{"version":3,"sources":["ng2-smart-table.ts"],"names":[],"mappings":";;;;AAAA,sDAAiD;AACjD,qEAAgE;AAChE,+CAA0C;AAC1C,kDAA6C;AAC7C,gEAA+D;AAAtD,sBAAA,IAAI,CAAA;AACb,oGAA0G;AAAjG,yCAAA,aAAa,CAAA","file":"ng2-smart-table.js","sourceRoot":""}

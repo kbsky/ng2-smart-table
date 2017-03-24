@@ -4,13 +4,14 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var core_1 = require('@angular/core');
-var edit_cell_default_1 = require('./edit-cell-default');
+var core_1 = require("@angular/core");
+var edit_cell_default_1 = require("./edit-cell-default");
 var CustomEditComponent = (function (_super) {
     __extends(CustomEditComponent, _super);
     function CustomEditComponent(resolver) {
-        _super.call(this);
-        this.resolver = resolver;
+        var _this = _super.call(this) || this;
+        _this.resolver = resolver;
+        return _this;
     }
     CustomEditComponent.prototype.ngOnChanges = function (changes) {
         var _this = this;
@@ -30,20 +31,20 @@ var CustomEditComponent = (function (_super) {
             this.customComponent.destroy();
         }
     };
-    CustomEditComponent.decorators = [
-        { type: core_1.Component, args: [{
-                    selector: 'table-cell-custom-editor',
-                    template: "\n    <template #dynamicTarget></template>\n  ",
-                },] },
-    ];
-    /** @nocollapse */
-    CustomEditComponent.ctorParameters = function () { return [
-        { type: core_1.ComponentFactoryResolver, },
-    ]; };
-    CustomEditComponent.propDecorators = {
-        'dynamicTarget': [{ type: core_1.ViewChild, args: ['dynamicTarget', { read: core_1.ViewContainerRef },] },],
-    };
     return CustomEditComponent;
 }(edit_cell_default_1.EditCellDefault));
+CustomEditComponent.decorators = [
+    { type: core_1.Component, args: [{
+                selector: 'table-cell-custom-editor',
+                template: "\n    <template #dynamicTarget></template>\n  ",
+            },] },
+];
+/** @nocollapse */
+CustomEditComponent.ctorParameters = function () { return [
+    { type: core_1.ComponentFactoryResolver, },
+]; };
+CustomEditComponent.propDecorators = {
+    'dynamicTarget': [{ type: core_1.ViewChild, args: ['dynamicTarget', { read: core_1.ViewContainerRef },] },],
+};
 exports.CustomEditComponent = CustomEditComponent;
 //# sourceMappingURL=custom-edit.component.js.map

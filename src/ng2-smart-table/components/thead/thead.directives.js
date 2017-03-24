@@ -1,7 +1,7 @@
 "use strict";
-var cells_1 = require('./cells');
-var rows_1 = require('./rows');
-var thead_component_1 = require('./thead.component');
+var cells_1 = require("./cells");
+var rows_1 = require("./rows");
+var thead_component_1 = require("./thead.component");
 exports.NG2_SMART_TABLE_THEAD_DIRECTIVES = [
     cells_1.ActionsComponent,
     cells_1.ActionsTitleComponent,

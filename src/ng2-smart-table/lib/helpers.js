@@ -55,7 +55,7 @@ function deepCloneArray(arr) {
 exports.deepExtend = function () {
     var objects = [];
     for (var _i = 0; _i < arguments.length; _i++) {
-        objects[_i - 0] = arguments[_i];
+        objects[_i] = arguments[_i];
     }
     if (arguments.length < 1 || typeof arguments[0] !== 'object') {
         return false;

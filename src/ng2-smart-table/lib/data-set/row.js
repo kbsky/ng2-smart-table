@@ -1,5 +1,5 @@
 "use strict";
-var cell_1 = require('./cell');
+var cell_1 = require("./cell");
 var Row = (function () {
     function Row(index, data, _dataSet) {
         this.index = index;

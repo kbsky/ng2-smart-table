@@ -1,5 +1,5 @@
 "use strict";
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var CustomViewComponent = (function () {
     function CustomViewComponent(resolver) {
         this.resolver = resolver;
@@ -17,21 +17,21 @@ var CustomViewComponent = (function () {
             this.customComponent.destroy();
         }
     };
-    CustomViewComponent.decorators = [
-        { type: core_1.Component, args: [{
-                    selector: 'custom-view-component',
-                    template: "\n    <template #dynamicTarget></template>\n  ",
-                },] },
-    ];
-    /** @nocollapse */
-    CustomViewComponent.ctorParameters = function () { return [
-        { type: core_1.ComponentFactoryResolver, },
-    ]; };
-    CustomViewComponent.propDecorators = {
-        'cell': [{ type: core_1.Input },],
-        'dynamicTarget': [{ type: core_1.ViewChild, args: ['dynamicTarget', { read: core_1.ViewContainerRef },] },],
-    };
     return CustomViewComponent;
 }());
+CustomViewComponent.decorators = [
+    { type: core_1.Component, args: [{
+                selector: 'custom-view-component',
+                template: "\n    <template #dynamicTarget></template>\n  ",
+            },] },
+];
+/** @nocollapse */
+CustomViewComponent.ctorParameters = function () { return [
+    { type: core_1.ComponentFactoryResolver, },
+]; };
+CustomViewComponent.propDecorators = {
+    'cell': [{ type: core_1.Input },],
+    'dynamicTarget': [{ type: core_1.ViewChild, args: ['dynamicTarget', { read: core_1.ViewContainerRef },] },],
+};
 exports.CustomViewComponent = CustomViewComponent;
 //# sourceMappingURL=custom-view.component.js.map

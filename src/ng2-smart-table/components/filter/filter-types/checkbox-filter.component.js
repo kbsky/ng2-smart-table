@@ -4,15 +4,16 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var core_1 = require('@angular/core');
-var forms_1 = require('@angular/forms');
-var default_filter_1 = require('./default-filter');
+var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
+var default_filter_1 = require("./default-filter");
 var CheckboxFilterComponent = (function (_super) {
     __extends(CheckboxFilterComponent, _super);
     function CheckboxFilterComponent() {
-        _super.call(this);
-        this.filterActive = false;
-        this.inputControl = new forms_1.FormControl();
+        var _this = _super.call(this) || this;
+        _this.filterActive = false;
+        _this.inputControl = new forms_1.FormControl();
+        return _this;
     }
     CheckboxFilterComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -33,15 +34,15 @@ var CheckboxFilterComponent = (function (_super) {
         this.filterActive = false;
         this.setFilter();
     };
-    CheckboxFilterComponent.decorators = [
-        { type: core_1.Component, args: [{
-                    selector: 'checkbox-filter',
-                    template: "\n    <input type=\"checkbox\" [formControl]=\"inputControl\" [ngClass]=\"inputClass\" class=\"form-control\">\n    <a href=\"#\" *ngIf=\"filterActive\" (click)=\"resetFilter($event)\">{{column.getFilterConfig()?.resetText || 'reset'}}</a>\n  "
-                },] },
-    ];
-    /** @nocollapse */
-    CheckboxFilterComponent.ctorParameters = function () { return []; };
     return CheckboxFilterComponent;
 }(default_filter_1.DefaultFilter));
+CheckboxFilterComponent.decorators = [
+    { type: core_1.Component, args: [{
+                selector: 'checkbox-filter',
+                template: "\n    <input type=\"checkbox\" [formControl]=\"inputControl\" [ngClass]=\"inputClass\" class=\"form-control\">\n    <a href=\"#\" *ngIf=\"filterActive\" (click)=\"resetFilter($event)\">{{column.getFilterConfig()?.resetText || 'reset'}}</a>\n  "
+            },] },
+];
+/** @nocollapse */
+CheckboxFilterComponent.ctorParameters = function () { return []; };
 exports.CheckboxFilterComponent = CheckboxFilterComponent;
 //# sourceMappingURL=checkbox-filter.component.js.map

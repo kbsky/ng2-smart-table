@@ -1,6 +1,5 @@
-import { Http } from '@angular/http';
+import { Http, RequestOptionsArgs } from '@angular/http';
 import { LocalDataSource } from '../local/local.data-source';
-import { RequestOptionsArgs } from '@angular/http/src/interfaces';
 import { Observable } from 'rxjs';
 import { ServerSourceConf } from './server-source.conf';
 export declare class ServerDataSource extends LocalDataSource {

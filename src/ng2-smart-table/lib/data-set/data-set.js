@@ -1,6 +1,6 @@
 "use strict";
-var row_1 = require('./row');
-var column_1 = require('./column');
+var row_1 = require("./row");
+var column_1 = require("./column");
 var DataSet = (function () {
     function DataSet(data, columnSettings) {
         if (data === void 0) { data = []; }

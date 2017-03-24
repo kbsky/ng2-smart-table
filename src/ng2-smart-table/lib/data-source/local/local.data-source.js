@@ -4,25 +4,26 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var local_sorter_1 = require('./local.sorter');
-var local_filter_1 = require('./local.filter');
-var local_pager_1 = require('./local.pager');
-var data_source_1 = require('../data-source');
-var helpers_1 = require('../../helpers');
+var local_sorter_1 = require("./local.sorter");
+var local_filter_1 = require("./local.filter");
+var local_pager_1 = require("./local.pager");
+var data_source_1 = require("../data-source");
+var helpers_1 = require("../../helpers");
 var LocalDataSource = (function (_super) {
     __extends(LocalDataSource, _super);
     function LocalDataSource(data) {
         if (data === void 0) { data = []; }
-        _super.call(this);
-        this.data = [];
-        this.filteredAndSorted = [];
-        this.sortConf = [];
-        this.filterConf = {
+        var _this = _super.call(this) || this;
+        _this.data = [];
+        _this.filteredAndSorted = [];
+        _this.sortConf = [];
+        _this.filterConf = {
             filters: [],
             andOperator: true
         };
-        this.pagingConf = {};
-        this.data = data;
+        _this.pagingConf = {};
+        _this.data = data;
+        return _this;
     }
     LocalDataSource.prototype.load = function (data) {
         this.data = data;

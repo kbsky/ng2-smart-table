@@ -31,8 +31,8 @@ var Cell = (function () {
     Cell.prototype.isEditable = function () {
         return this.getColumn().isEditable;
     };
-    Cell.PREPARE = function (value) { return value; };
     return Cell;
 }());
+Cell.PREPARE = function (value) { return value; };
 exports.Cell = Cell;
 //# sourceMappingURL=cell.js.map

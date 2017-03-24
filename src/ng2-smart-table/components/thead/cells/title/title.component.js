@@ -1,5 +1,5 @@
 "use strict";
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var TitleComponent = (function () {
     function TitleComponent() {
         this.currentDirection = '';
@@ -39,21 +39,21 @@ var TitleComponent = (function () {
         }
         return this.currentDirection;
     };
-    TitleComponent.decorators = [
-        { type: core_1.Component, args: [{
-                    selector: 'ng2-smart-table-title',
-                    styleUrls: ['./title.component.scss'],
-                    template: "\n    <a href=\"#\" *ngIf=\"column.isSortable\"\n                (click)=\"_sort($event, column)\" \n                class=\"ng2-smart-sort-link sort\"\n                [ngClass]=\"currentDirection\">\n      {{ column.title }}\n    </a>\n    <span class=\"ng2-smart-sort\" *ngIf=\"!column.isSortable\">{{ column.title }}</span>\n  "
-                },] },
-    ];
-    /** @nocollapse */
-    TitleComponent.ctorParameters = function () { return []; };
-    TitleComponent.propDecorators = {
-        'column': [{ type: core_1.Input },],
-        'source': [{ type: core_1.Input },],
-        'sort': [{ type: core_1.Output },],
-    };
     return TitleComponent;
 }());
+TitleComponent.decorators = [
+    { type: core_1.Component, args: [{
+                selector: 'ng2-smart-table-title',
+                styleUrls: ['./title.component.scss'],
+                template: "\n    <a href=\"#\" *ngIf=\"column.isSortable\"\n                (click)=\"_sort($event, column)\" \n                class=\"ng2-smart-sort-link sort\"\n                [ngClass]=\"currentDirection\">\n      {{ column.title }}\n    </a>\n    <span class=\"ng2-smart-sort\" *ngIf=\"!column.isSortable\">{{ column.title }}</span>\n  "
+            },] },
+];
+/** @nocollapse */
+TitleComponent.ctorParameters = function () { return []; };
+TitleComponent.propDecorators = {
+    'column': [{ type: core_1.Input },],
+    'source': [{ type: core_1.Input },],
+    'sort': [{ type: core_1.Output },],
+};
 exports.TitleComponent = TitleComponent;
 //# sourceMappingURL=title.component.js.map

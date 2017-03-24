@@ -4,21 +4,22 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var local_data_source_1 = require('../local/local.data-source');
-var url_search_params_1 = require('@angular/http/src/url_search_params');
-var server_source_conf_1 = require('./server-source.conf');
-var helpers_1 = require('../../helpers');
+var http_1 = require("@angular/http");
+var local_data_source_1 = require("../local/local.data-source");
+var server_source_conf_1 = require("./server-source.conf");
+var helpers_1 = require("../../helpers");
 var ServerDataSource = (function (_super) {
     __extends(ServerDataSource, _super);
     function ServerDataSource(http, conf) {
         if (conf === void 0) { conf = {}; }
-        _super.call(this);
-        this.http = http;
-        this.lastRequestCount = 0;
-        this.conf = new server_source_conf_1.ServerSourceConf(conf);
-        if (!this.conf.endPoint) {
+        var _this = _super.call(this) || this;
+        _this.http = http;
+        _this.lastRequestCount = 0;
+        _this.conf = new server_source_conf_1.ServerSourceConf(conf);
+        if (!_this.conf.endPoint) {
             throw new Error('At least endPoint must be specified as a configuration of the server data source.');
         }
+        return _this;
     }
     ServerDataSource.prototype.count = function () {
         return this.lastRequestCount;
@@ -64,7 +65,7 @@ var ServerDataSource = (function (_super) {
     };
     ServerDataSource.prototype.createRequestOptions = function () {
         var requestOptions = {};
-        requestOptions.search = new url_search_params_1.URLSearchParams();
+        requestOptions.search = new http_1.URLSearchParams();
         requestOptions = this.addSortRequestOptions(requestOptions);
         requestOptions = this.addFilterRequestOptions(requestOptions);
         return this.addPagerRequestOptions(requestOptions);
